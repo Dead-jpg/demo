@@ -1,16 +1,29 @@
-<h2>Fiction Books</h2>
-<table border="1">
-    <tr><th>Title</th><th>Quantity</th><th>Price</th><th>Photo</th></tr>
-    <tr>
-        <td>Harry Potter</td>
-        <td>8</td>
-        <td>$20</td>
-        <td><img src="images/harrypotter.jpg" width="80"></td>
-    </tr>
-    <tr>
-        <td>Lord of the Rings</td>
-        <td>3</td>
-        <td>$25</td>
-        <td><img src="images/lotr.jpg" width="80"></td>
-    </tr>
-</table>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Electronics Inventory</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Electronics Inventory</h1>
+    <table border="1">
+        <tr><th>Device</th><th>Quantity</th><th>Price ($)</th></tr>
+        <tr><td>Laptop</td><td>5</td><td>800</td></tr>
+        <tr><td>Smartphone</td><td>10</td><td>500</td></tr>
+        <tr><td>Tablet</td><td>7</td><td>300</td></tr>
+    </table>
+
+    <h2>Total Inventory Value</h2>
+    <script>
+       const devices=[
+        {quantity:5,price:800},
+        {quantity:10,price:1300},
+        {quantity:18,price:1800}
+    
+       ];
+
+       let total_val = devices.reduce((sum,item)=>sum+(item.quantity*item.price),0)
+       document.write("<p>$"+total_val+ "/<p>");
+    </script>
+</body>
+</html>
